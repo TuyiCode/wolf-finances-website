@@ -33,3 +33,35 @@ spollerButtons.forEach((button) => {
     }
   });
 });
+
+// Debug and ensure links work
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Wolf Finances website loaded successfully!');
+    
+    // Ensure all links work properly
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            console.log('Link clicked:', this.href);
+        });
+    });
+    
+    // Specifically ensure hero buttons work
+    const heroButtons = document.querySelectorAll('.main__cta-group a');
+    heroButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            console.log('Hero button clicked:', this.href);
+            // Ensure the link works
+            window.location.href = this.href;
+        });
+    });
+    
+    // Ensure floating CTA works
+    const floatingCTA = document.querySelector('.floating-cta__button');
+    if (floatingCTA) {
+        floatingCTA.addEventListener('click', function(e) {
+            console.log('Floating CTA clicked:', this.href);
+            window.location.href = this.href;
+        });
+    }
+});
