@@ -5,9 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="img/favicon.png" />
-  <title>Financial Calculators - Loan & Investment Tools | TaxPro Services</title>
-  <meta name="description" content="Free financial calculators for car loans, mortgages, personal loans, and investments. Plan your finances and make informed decisions." />
-  <link rel="stylesheet" href="css/style.css?v=1.3" />
+  <title>Financial Calculators - Loan & Investment Tools | Wolf Finances</title>
+  <meta name="description" content="Free financial calculators for car loans, mortgages, personal loans, and investments. Plan your finances and make informed decisions with Wolf Finances." />
+  <meta name="keywords" content="financial calculators, loan calculator, mortgage calculator, investment calculator, car loan calculator, personal loan calculator">
+  <meta name="author" content="Wolf Finances">
+  <meta property="og:title" content="Financial Calculators - Wolf Finances">
+  <meta property="og:description" content="Free financial calculators for loans and investments. Plan your finances with professional tools.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wolffinances.com/calculators.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="css/style.css?v=1.4" />
 </head>
 
 <body>
@@ -41,34 +48,64 @@
     <main class="page">
       <section class="page__main main main_calculators main_pages">
         <div class="main__container main__container_pages">
-          <h1 class="main__title">Financial Calculators</h1>
-          <div class="main__text main__text_pages">
-            Free tools to help you plan your finances, calculate loan payments, and make informed investment decisions.
+          <div class="calculator-hero">
+            <div class="calculator-hero__icon">🧮</div>
+            <h1 class="main__title">Financial Calculators</h1>
+            <div class="main__text main__text_pages">
+              Professional financial tools to help you plan your finances, calculate loan payments, and make informed investment decisions. 
+              Get accurate estimates for your financial planning needs.
+            </div>
+            <div class="calculator-hero__stats">
+              <div class="calculator-stat">
+                <span class="calculator-stat__number">4</span>
+                <span class="calculator-stat__label">Professional Tools</span>
+              </div>
+              <div class="calculator-stat">
+                <span class="calculator-stat__number">100%</span>
+                <span class="calculator-stat__label">Free to Use</span>
+              </div>
+              <div class="calculator-stat">
+                <span class="calculator-stat__number">24/7</span>
+                <span class="calculator-stat__label">Available</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      
       <section class="page__calculators calculators">
         <div class="calculators__container">
+          <div class="calculators__intro">
+            <h2 class="calculators__intro-title">Choose Your Calculator</h2>
+            <p class="calculators__intro-text">Select the calculator that best fits your financial planning needs. All tools are designed to provide accurate estimates for informed decision-making.</p>
+          </div>
+          
           <div class="calculators__row">
             <div class="calculators__column">
               <div class="calculators__item item-calculator">
-                <div class="item-calculator__image">
-                  <img src="img/home/services_placeholder.jpg" alt="Car loan calculator" />
+                <div class="item-calculator__header">
+                  <div class="item-calculator__icon">🚗</div>
+                  <h3 class="item-calculator__title">Car Loan Calculator</h3>
+                  <div class="item-calculator__badge">Most Popular</div>
                 </div>
                 <div class="item-calculator__content">
-                  <h3 class="item-calculator__title">Car Loan Calculator</h3>
                   <div class="item-calculator__text">
                     Calculate your monthly car payment, total interest, and loan terms. Compare different 
                     loan options to find the best deal for your budget.
                   </div>
+                  <div class="item-calculator__features">
+                    <span class="feature-tag">Monthly Payment</span>
+                    <span class="feature-tag">Total Interest</span>
+                    <span class="feature-tag">Loan Comparison</span>
+                  </div>
                   <div class="item-calculator__form">
                     <div class="form-group">
                       <label for="car-price">Car Price ($)</label>
-                      <input type="number" id="car-price" placeholder="25000" min="0">
+                      <input type="number" id="car-price" placeholder="25,000" min="0">
                     </div>
                     <div class="form-group">
                       <label for="down-payment">Down Payment ($)</label>
-                      <input type="number" id="down-payment" placeholder="5000" min="0">
+                      <input type="number" id="down-payment" placeholder="5,000" min="0">
                     </div>
                     <div class="form-group">
                       <label for="loan-term">Loan Term (Years)</label>
@@ -84,31 +121,41 @@
                       <label for="interest-rate">Interest Rate (%)</label>
                       <input type="number" id="interest-rate" placeholder="5.5" step="0.1" min="0">
                     </div>
-                    <button type="button" class="calculator-button" onclick="calculateCarLoan()">Calculate Payment</button>
+                    <button type="button" class="calculator-button" onclick="calculateCarLoan()">
+                      <span class="button-icon">📊</span>
+                      Calculate Payment
+                    </button>
                     <div class="calculator-result" id="car-loan-result"></div>
                   </div>
                 </div>
               </div>
             </div>
+            
             <div class="calculators__column">
               <div class="calculators__item item-calculator">
-                <div class="item-calculator__image">
-                  <img src="img/home/services_placeholder.jpg" alt="Mortgage calculator" />
+                <div class="item-calculator__header">
+                  <div class="item-calculator__icon">🏠</div>
+                  <h3 class="item-calculator__title">Mortgage Calculator</h3>
+                  <div class="item-calculator__badge">Home Buying</div>
                 </div>
                 <div class="item-calculator__content">
-                  <h3 class="item-calculator__title">Mortgage Calculator</h3>
                   <div class="item-calculator__text">
                     Estimate your monthly mortgage payment including principal, interest, taxes, and insurance. 
                     Understand the total cost of homeownership.
                   </div>
+                  <div class="item-calculator__features">
+                    <span class="feature-tag">PITI Payment</span>
+                    <span class="feature-tag">Total Cost</span>
+                    <span class="feature-tag">Affordability</span>
+                  </div>
                   <div class="item-calculator__form">
                     <div class="form-group">
                       <label for="home-price">Home Price ($)</label>
-                      <input type="number" id="home-price" placeholder="300000" min="0">
+                      <input type="number" id="home-price" placeholder="300,000" min="0">
                     </div>
                     <div class="form-group">
                       <label for="mortgage-down">Down Payment ($)</label>
-                      <input type="number" id="mortgage-down" placeholder="60000" min="0">
+                      <input type="number" id="mortgage-down" placeholder="60,000" min="0">
                     </div>
                     <div class="form-group">
                       <label for="mortgage-term">Loan Term (Years)</label>
@@ -121,27 +168,37 @@
                       <label for="mortgage-rate">Interest Rate (%)</label>
                       <input type="number" id="mortgage-rate" placeholder="6.5" step="0.1" min="0">
                     </div>
-                    <button type="button" class="calculator-button" onclick="calculateMortgage()">Calculate Payment</button>
+                    <button type="button" class="calculator-button" onclick="calculateMortgage()">
+                      <span class="button-icon">🏠</span>
+                      Calculate Payment
+                    </button>
                     <div class="calculator-result" id="mortgage-result"></div>
                   </div>
                 </div>
               </div>
             </div>
+            
             <div class="calculators__column">
               <div class="calculators__item item-calculator">
-                <div class="item-calculator__image">
-                  <img src="img/home/services_placeholder.jpg" alt="Personal loan calculator" />
+                <div class="item-calculator__header">
+                  <div class="item-calculator__icon">💳</div>
+                  <h3 class="item-calculator__title">Personal Loan Calculator</h3>
+                  <div class="item-calculator__badge">Debt Consolidation</div>
                 </div>
                 <div class="item-calculator__content">
-                  <h3 class="item-calculator__title">Personal Loan Calculator</h3>
                   <div class="item-calculator__text">
                     Calculate monthly payments for personal loans, debt consolidation, or major purchases. 
                     Compare different loan amounts and terms.
                   </div>
+                  <div class="item-calculator__features">
+                    <span class="feature-tag">Monthly Payment</span>
+                    <span class="feature-tag">Total Interest</span>
+                    <span class="feature-tag">Debt Planning</span>
+                  </div>
                   <div class="item-calculator__form">
                     <div class="form-group">
                       <label for="loan-amount">Loan Amount ($)</label>
-                      <input type="number" id="loan-amount" placeholder="10000" min="0">
+                      <input type="number" id="loan-amount" placeholder="10,000" min="0">
                     </div>
                     <div class="form-group">
                       <label for="personal-term">Loan Term (Years)</label>
@@ -157,27 +214,37 @@
                       <label for="personal-rate">Interest Rate (%)</label>
                       <input type="number" id="personal-rate" placeholder="8.5" step="0.1" min="0">
                     </div>
-                    <button type="button" class="calculator-button" onclick="calculatePersonalLoan()">Calculate Payment</button>
+                    <button type="button" class="calculator-button" onclick="calculatePersonalLoan()">
+                      <span class="button-icon">💳</span>
+                      Calculate Payment
+                    </button>
                     <div class="calculator-result" id="personal-loan-result"></div>
                   </div>
                 </div>
               </div>
             </div>
+            
             <div class="calculators__column">
               <div class="calculators__item item-calculator">
-                <div class="item-calculator__image">
-                  <img src="img/home/services_placeholder.jpg" alt="Investment calculator" />
+                <div class="item-calculator__header">
+                  <div class="item-calculator__icon">📈</div>
+                  <h3 class="item-calculator__title">Investment Calculator</h3>
+                  <div class="item-calculator__badge">Wealth Building</div>
                 </div>
                 <div class="item-calculator__content">
-                  <h3 class="item-calculator__title">Investment Calculator</h3>
                   <div class="item-calculator__text">
                     Project the growth of your investments over time. See how compound interest can work 
                     in your favor for long-term financial goals.
                   </div>
+                  <div class="item-calculator__features">
+                    <span class="feature-tag">Compound Growth</span>
+                    <span class="feature-tag">Future Value</span>
+                    <span class="feature-tag">Goal Planning</span>
+                  </div>
                   <div class="item-calculator__form">
                     <div class="form-group">
                       <label for="initial-investment">Initial Investment ($)</label>
-                      <input type="number" id="initial-investment" placeholder="10000" min="0">
+                      <input type="number" id="initial-investment" placeholder="10,000" min="0">
                     </div>
                     <div class="form-group">
                       <label for="monthly-contribution">Monthly Contribution ($)</label>
@@ -191,23 +258,51 @@
                       <label for="return-rate">Expected Annual Return (%)</label>
                       <input type="number" id="return-rate" placeholder="7" step="0.1" min="0">
                     </div>
-                    <button type="button" class="calculator-button" onclick="calculateInvestment()">Calculate Growth</button>
+                    <button type="button" class="calculator-button" onclick="calculateInvestment()">
+                      <span class="button-icon">📈</span>
+                      Calculate Growth
+                    </button>
                     <div class="calculator-result" id="investment-result"></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          
+          <div class="calculators__tips">
+            <h3 class="calculators__tips-title">💡 Pro Tips for Better Financial Planning</h3>
+            <div class="calculators__tips-grid">
+              <div class="tip-card">
+                <div class="tip-icon">🎯</div>
+                <h4>Set Clear Goals</h4>
+                <p>Define specific financial goals before using calculators to get more accurate results.</p>
+              </div>
+              <div class="tip-card">
+                <div class="tip-icon">📊</div>
+                <h4>Compare Options</h4>
+                <p>Use different scenarios to compare loan terms, rates, and payment options.</p>
+              </div>
+              <div class="tip-card">
+                <div class="tip-icon">💰</div>
+                <h4>Consider All Costs</h4>
+                <p>Factor in taxes, insurance, and maintenance costs for complete financial planning.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+      
       <section class="page__outro outro outro_calculators">
         <div class="outro__container">
-          <h2 class="outro__title title">Need Help with Financial Planning?</h2>
+          <h2 class="outro__title title">Need Professional Financial Advice?</h2>
           <div class="outro__text">
-            These calculators are great tools, but nothing beats personalized financial advice. 
-            Schedule a consultation to discuss your specific financial situation and goals.
+            These calculators are excellent tools for initial planning, but nothing beats personalized financial advice from a professional. 
+            Schedule a consultation to discuss your specific financial situation and get expert guidance.
           </div>
-          <a href="contact.html" class="outro__button button">Schedule Consultation</a>
+          <div class="outro__cta-group">
+            <a href="contact.html" class="outro__button button">Schedule Consultation</a>
+            <a href="budget.html" class="outro__button button secondary">Try Budget Planner</a>
+          </div>
         </div>
       </section>
     </main>
@@ -221,8 +316,8 @@
       </div>
     </footer>
   </div>
-  <script src="js/script.js?v=1.2"></script>
-  <script src="js/calculators.js?v=1.2"></script>
+  <script src="js/script.js?v=1.4"></script>
+  <script src="js/calculators.js?v=1.4"></script>
 </body>
 
 </html> 
