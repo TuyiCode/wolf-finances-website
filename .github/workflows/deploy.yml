@@ -1,0 +1,40 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Deploy to Hostinger via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: public_html/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.DS_Store
+          **/deploy.sh
+          **/DEPLOYMENT_GUIDE.md
+          **/UPLOAD_CHECKLIST.txt
+          **/SSL_SETUP_GUIDE.md
+          **/DEPLOYMENT_AUTOMATION.md
+          **/wolf-finances-website.zip
+          **/.github/**
+          
+    - name: Deployment Status
+      run: |
+        echo "✅ Wolf Finances website deployed successfully!"
+        echo "🌐 Website: https://wolffinances.com"
+        echo "🔄 Changes should be live within 2-3 minutes" 
