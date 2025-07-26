@@ -63,9 +63,9 @@ function calculateBudget() {
     // Update net income color based on positive/negative
     const netIncomeElement = document.getElementById('net-income');
     if (netIncome >= 0) {
-        netIncomeElement.style.color = '#3F7054';
+        netIncomeElement.style.color = '#F5F5E0'; // Light color for positive on dark background
     } else {
-        netIncomeElement.style.color = '#FFFFFF';
+        netIncomeElement.style.color = '#FFFFFF'; // White for negative
     }
 
     // Create expense breakdown chart
