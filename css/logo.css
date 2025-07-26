@@ -1,0 +1,38 @@
+/* Wolf Finances Logo CSS */
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #CEC7BD;
+  font-weight: 700;
+  position: relative;
+}
+
+.logo__image {
+  height: 60px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo__image {
+    height: 50px;
+    max-width: 160px;
+  }
+  
+
+}
+
+@media (max-width: 480px) {
+  .logo__image {
+    height: 40px;
+    max-width: 120px;
+  }
+  
+
+} 

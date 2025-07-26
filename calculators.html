@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <title>Financial Calculators - Loan & Investment Tools | TaxPro Services</title>
+  <meta name="description" content="Free financial calculators for car loans, mortgages, personal loans, and investments. Plan your finances and make informed decisions." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo logo">
+          <img src="img/logo.png" alt="Wolf Finances LLC" class="logo__image">
+        </a>
+        <div class="header__navigation">
+          <div class="header__menu menu">
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+                <li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
+                <li class="menu__item"><a href="services.html" class="menu__link">Services</a></li>
+                <li class="menu__item"><a href="blog.html" class="menu__link">Tax Blog</a></li>
+                <li class="menu__item"><a href="calculators.html" class="menu__link">Calculators</a></li>
+                <li class="menu__item"><a href="budget.html" class="menu__link">Budget</a></li>
+                <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+              </ul>
+              <a href="contact.html" class="actions-header__button">Schedule Appointment</a>
+            </nav>
+          </div>
+          <div class="header__actions actions-header">
+            <button type="button" class="menu__icon icon-menu"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <section class="page__main main main_calculators main_pages">
+        <div class="main__container main__container_pages">
+          <h1 class="main__title">Financial Calculators</h1>
+          <div class="main__text main__text_pages">
+            Free tools to help you plan your finances, calculate loan payments, and make informed investment decisions.
+          </div>
+        </div>
+      </section>
+      <section class="page__calculators calculators">
+        <div class="calculators__container">
+          <div class="calculators__row">
+            <div class="calculators__column">
+              <div class="calculators__item item-calculator">
+                <div class="item-calculator__image">
+                  <img src="img/home/services_placeholder.jpg" alt="Car loan calculator" />
+                </div>
+                <div class="item-calculator__content">
+                  <h3 class="item-calculator__title">Car Loan Calculator</h3>
+                  <div class="item-calculator__text">
+                    Calculate your monthly car payment, total interest, and loan terms. Compare different 
+                    loan options to find the best deal for your budget.
+                  </div>
+                  <div class="item-calculator__form">
+                    <div class="form-group">
+                      <label for="car-price">Car Price ($)</label>
+                      <input type="number" id="car-price" placeholder="25000" min="0">
+                    </div>
+                    <div class="form-group">
+                      <label for="down-payment">Down Payment ($)</label>
+                      <input type="number" id="down-payment" placeholder="5000" min="0">
+                    </div>
+                    <div class="form-group">
+                      <label for="loan-term">Loan Term (Years)</label>
+                      <select id="loan-term">
+                        <option value="3">3 Years</option>
+                        <option value="4">4 Years</option>
+                        <option value="5" selected>5 Years</option>
+                        <option value="6">6 Years</option>
+                        <option value="7">7 Years</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="interest-rate">Interest Rate (%)</label>
+                      <input type="number" id="interest-rate" placeholder="5.5" step="0.1" min="0">
+                    </div>
+                    <button type="button" class="calculator-button" onclick="calculateCarLoan()">Calculate Payment</button>
+                    <div class="calculator-result" id="car-loan-result"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="calculators__column">
+              <div class="calculators__item item-calculator">
+                <div class="item-calculator__image">
+                  <img src="img/home/services_placeholder.jpg" alt="Mortgage calculator" />
+                </div>
+                <div class="item-calculator__content">
+                  <h3 class="item-calculator__title">Mortgage Calculator</h3>
+                  <div class="item-calculator__text">
+                    Estimate your monthly mortgage payment including principal, interest, taxes, and insurance. 
+                    Understand the total cost of homeownership.
+                  </div>
+                  <div class="item-calculator__form">
+                    <div class="form-group">
+                      <label for="home-price">Home Price ($)</label>
+                      <input type="number" id="home-price" placeholder="300000" min="0">
+                    </div>
+                    <div class="form-group">
+                      <label for="mortgage-down">Down Payment ($)</label>
+                      <input type="number" id="mortgage-down" placeholder="60000" min="0">
+                    </div>
+                    <div class="form-group">
+                      <label for="mortgage-term">Loan Term (Years)</label>
+                      <select id="mortgage-term">
+                        <option value="15">15 Years</option>
+                        <option value="30" selected>30 Years</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="mortgage-rate">Interest Rate (%)</label>
+                      <input type="number" id="mortgage-rate" placeholder="6.5" step="0.1" min="0">
+                    </div>
+                    <button type="button" class="calculator-button" onclick="calculateMortgage()">Calculate Payment</button>
+                    <div class="calculator-result" id="mortgage-result"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="calculators__column">
+              <div class="calculators__item item-calculator">
+                <div class="item-calculator__image">
+                  <img src="img/home/services_placeholder.jpg" alt="Personal loan calculator" />
+                </div>
+                <div class="item-calculator__content">
+                  <h3 class="item-calculator__title">Personal Loan Calculator</h3>
+                  <div class="item-calculator__text">
+                    Calculate monthly payments for personal loans, debt consolidation, or major purchases. 
+                    Compare different loan amounts and terms.
+                  </div>
+                  <div class="item-calculator__form">
+                    <div class="form-group">
+                      <label for="loan-amount">Loan Amount ($)</label>
+                      <input type="number" id="loan-amount" placeholder="10000" min="0">
+                    </div>
+                    <div class="form-group">
+                      <label for="personal-term">Loan Term (Years)</label>
+                      <select id="personal-term">
+                        <option value="1">1 Year</option>
+                        <option value="2">2 Years</option>
+                        <option value="3" selected>3 Years</option>
+                        <option value="4">4 Years</option>
+                        <option value="5">5 Years</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="personal-rate">Interest Rate (%)</label>
+                      <input type="number" id="personal-rate" placeholder="8.5" step="0.1" min="0">
+                    </div>
+                    <button type="button" class="calculator-button" onclick="calculatePersonalLoan()">Calculate Payment</button>
+                    <div class="calculator-result" id="personal-loan-result"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="calculators__column">
+              <div class="calculators__item item-calculator">
+                <div class="item-calculator__image">
+                  <img src="img/home/services_placeholder.jpg" alt="Investment calculator" />
+                </div>
+                <div class="item-calculator__content">
+                  <h3 class="item-calculator__title">Investment Calculator</h3>
+                  <div class="item-calculator__text">
+                    Project the growth of your investments over time. See how compound interest can work 
+                    in your favor for long-term financial goals.
+                  </div>
+                  <div class="item-calculator__form">
+                    <div class="form-group">
+                      <label for="initial-investment">Initial Investment ($)</label>
+                      <input type="number" id="initial-investment" placeholder="10000" min="0">
+                    </div>
+                    <div class="form-group">
+                      <label for="monthly-contribution">Monthly Contribution ($)</label>
+                      <input type="number" id="monthly-contribution" placeholder="500" min="0">
+                    </div>
+                    <div class="form-group">
+                      <label for="investment-years">Years to Invest</label>
+                      <input type="number" id="investment-years" placeholder="20" min="1">
+                    </div>
+                    <div class="form-group">
+                      <label for="return-rate">Expected Annual Return (%)</label>
+                      <input type="number" id="return-rate" placeholder="7" step="0.1" min="0">
+                    </div>
+                    <button type="button" class="calculator-button" onclick="calculateInvestment()">Calculate Growth</button>
+                    <div class="calculator-result" id="investment-result"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__outro outro outro_calculators">
+        <div class="outro__container">
+          <h2 class="outro__title title">Need Help with Financial Planning?</h2>
+          <div class="outro__text">
+            These calculators are great tools, but nothing beats personalized financial advice. 
+            Schedule a consultation to discuss your specific financial situation and goals.
+          </div>
+          <a href="contact.html" class="outro__button button">Schedule Consultation</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <a href="#" class="footer__policy">Privacy Policy – Terms & Conditions</a>
+        <a href="index.html" class="footer__logo logo">
+          <img src="img/logo.png" alt="Wolf Finances LLC" class="logo__image">
+        </a>
+        <div class="footer__copyright">Copyright © 2025 Wolf Finances – All Rights Reserved</div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="js/calculators.js"></script>
+</body>
+
+</html> 

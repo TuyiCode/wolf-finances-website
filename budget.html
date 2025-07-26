@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <title>Budget Calculator - Personal Finance Planning | Wolf Finances</title>
+  <meta name="description" content="Create your personal budget with our interactive budget calculator. Track income, expenses, and get personalized financial advice to improve your financial health." />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/chart.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo logo">
+          <img src="img/logo.png" alt="Wolf Finances LLC" class="logo__image">
+        </a>
+        <div class="header__navigation">
+          <div class="header__menu menu">
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+                <li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
+                <li class="menu__item"><a href="services.html" class="menu__link">Services</a></li>
+                <li class="menu__item"><a href="blog.html" class="menu__link">Tax Blog</a></li>
+                <li class="menu__item"><a href="calculators.html" class="menu__link">Calculators</a></li>
+                <li class="menu__item"><a href="budget.html" class="menu__link">Budget</a></li>
+                <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+              </ul>
+              <a href="contact.html" class="actions-header__button">Schedule Appointment</a>
+            </nav>
+          </div>
+          <div class="header__actions actions-header">
+            <button type="button" class="menu__icon icon-menu"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <section class="page__main main main_budget main_pages">
+        <div class="main__container main__container_pages">
+          <h1 class="main__title">Budget Calculator</h1>
+          <div class="main__text main__text_pages">
+            Take control of your finances with our interactive budget planner. Track your income and expenses to achieve your financial goals.
+          </div>
+        </div>
+      </section>
+      
+      <section class="page__budget budget">
+        <div class="budget__container">
+          <div class="budget__grid">
+            <!-- Budget Input Form -->
+            <div class="budget__input-section">
+              <h2 class="budget__title">Your Monthly Budget</h2>
+              
+              <!-- Income Section -->
+              <div class="budget__section">
+                <h3 class="budget__section-title">Monthly Income</h3>
+                <div class="budget__form-group">
+                  <label for="salary">Salary/Wages</label>
+                  <input type="number" id="salary" placeholder="0" min="0" step="0.01">
+                </div>
+                <div class="budget__form-group">
+                  <label for="side-income">Side Income/Freelance</label>
+                  <input type="number" id="side-income" placeholder="0" min="0" step="0.01">
+                </div>
+                <div class="budget__form-group">
+                  <label for="investment-income">Investment Income</label>
+                  <input type="number" id="investment-income" placeholder="0" min="0" step="0.01">
+                </div>
+                <div class="budget__form-group">
+                  <label for="other-income">Other Income</label>
+                  <input type="number" id="other-income" placeholder="0" min="0" step="0.01">
+                </div>
+              </div>
+
+              <!-- Expenses Section -->
+              <div class="budget__section">
+                <h3 class="budget__section-title">Monthly Expenses</h3>
+                
+                <div class="budget__expense-category">
+                  <h4>Housing</h4>
+                  <div class="budget__form-group">
+                    <label for="rent-mortgage">Rent/Mortgage</label>
+                    <input type="number" id="rent-mortgage" placeholder="0" min="0" step="0.01">
+                  </div>
+                  <div class="budget__form-group">
+                    <label for="utilities">Utilities (Electric, Water, Gas)</label>
+                    <input type="number" id="utilities" placeholder="0" min="0" step="0.01">
+                  </div>
+                  <div class="budget__form-group">
+                    <label for="internet-phone">Internet & Phone</label>
+                    <input type="number" id="internet-phone" placeholder="0" min="0" step="0.01">
+                  </div>
+                </div>
+
+                <div class="budget__expense-category">
+                  <h4>Transportation</h4>
+                  <div class="budget__form-group">
+                    <label for="car-payment">Car Payment</label>
+                    <input type="number" id="car-payment" placeholder="0" min="0" step="0.01">
+                  </div>
+                  <div class="budget__form-group">
+                    <label for="gas">Gas/Fuel</label>
+                    <input type="number" id="gas" placeholder="0" min="0" step="0.01">
+                  </div>
+                  <div class="budget__form-group">
+                    <label for="insurance">Car Insurance</label>
+                    <input type="number" id="insurance" placeholder="0" min="0" step="0.01">
+                  </div>
+                  <div class="budget__form-group">
+                    <label for="maintenance">Maintenance & Repairs</label>
+                    <input type="number" id="maintenance" placeholder="0" min="0" step="0.01">
+                  </div>
+                </div>
+
+                <div class="budget__expense-category">
+                  <h4>Food & Dining</h4>
+                  <div class="budget__form-group">
+                    <label for="groceries">Groceries</label>
+                    <input type="number" id="groceries" placeholder="0" min="0" step="0.01">
+                  </div>
+                  <div class="budget__form-group">
+                    <label for="dining-out">Dining Out</label>
+                    <input type="number" id="dining-out" placeholder="0" min="0" step="0.01">
+                  </div>
+                </div>
+
+                <div class="budget__expense-category">
+                  <h4>Healthcare</h4>
+                  <div class="budget__form-group">
+                    <label for="health-insurance">Health Insurance</label>
+                    <input type="number" id="health-insurance" placeholder="0" min="0" step="0.01">
+                  </div>
+                  <div class="budget__form-group">
+                    <label for="medical-expenses">Medical Expenses</label>
+                    <input type="number" id="medical-expenses" placeholder="0" min="0" step="0.01">
+                  </div>
+                </div>
+
+                <div class="budget__expense-category">
+                  <h4>Entertainment & Lifestyle</h4>
+                  <div class="budget__form-group">
+                    <label for="entertainment">Entertainment</label>
+                    <input type="number" id="entertainment" placeholder="0" min="0" step="0.01">
+                  </div>
+                  <div class="budget__form-group">
+                    <label for="shopping">Shopping/Clothing</label>
+                    <input type="number" id="shopping" placeholder="0" min="0" step="0.01">
+                  </div>
+                  <div class="budget__form-group">
+                    <label for="subscriptions">Subscriptions (Netflix, etc.)</label>
+                    <input type="number" id="subscriptions" placeholder="0" min="0" step="0.01">
+                  </div>
+                </div>
+
+                <div class="budget__expense-category">
+                  <h4>Debt & Savings</h4>
+                  <div class="budget__form-group">
+                    <label for="credit-cards">Credit Card Payments</label>
+                    <input type="number" id="credit-cards" placeholder="0" min="0" step="0.01">
+                  </div>
+                  <div class="budget__form-group">
+                    <label for="student-loans">Student Loans</label>
+                    <input type="number" id="student-loans" placeholder="0" min="0" step="0.01">
+                  </div>
+                  <div class="budget__form-group">
+                    <label for="savings">Savings</label>
+                    <input type="number" id="savings" placeholder="0" min="0" step="0.01">
+                  </div>
+                </div>
+
+                <div class="budget__expense-category">
+                  <h4>Other</h4>
+                  <div class="budget__form-group">
+                    <label for="other-expenses">Other Expenses</label>
+                    <input type="number" id="other-expenses" placeholder="0" min="0" step="0.01">
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="budget__calculate-btn" onclick="calculateBudget()">Calculate My Budget</button>
+            </div>
+
+            <!-- Budget Results -->
+            <div class="budget__results-section">
+              <div class="budget__summary">
+                <h3 class="budget__summary-title">Budget Summary</h3>
+                <div class="budget__summary-grid">
+                  <div class="budget__summary-item">
+                    <span class="budget__summary-label">Total Income</span>
+                    <span class="budget__summary-value" id="total-income">$0</span>
+                  </div>
+                  <div class="budget__summary-item">
+                    <span class="budget__summary-label">Total Expenses</span>
+                    <span class="budget__summary-value" id="total-expenses">$0</span>
+                  </div>
+                  <div class="budget__summary-item budget__summary-item--highlight">
+                    <span class="budget__summary-label">Net Income</span>
+                    <span class="budget__summary-value" id="net-income">$0</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Charts -->
+              <div class="budget__charts">
+                <div class="budget__chart-container">
+                  <h4>Expense Breakdown</h4>
+                  <canvas id="expenseChart" width="400" height="300"></canvas>
+                </div>
+                <div class="budget__chart-container">
+                  <h4>Income vs Expenses</h4>
+                  <canvas id="incomeExpenseChart" width="400" height="300"></canvas>
+                </div>
+              </div>
+
+              <!-- Financial Advice -->
+              <div class="budget__advice">
+                <h3 class="budget__advice-title">Financial Advice</h3>
+                <div class="budget__advice-content" id="financial-advice">
+                  <p>Enter your income and expenses above to get personalized financial advice.</p>
+                </div>
+              </div>
+
+              <!-- Budget Tips -->
+              <div class="budget__tips">
+                <h3 class="budget__tips-title">Budgeting Tips</h3>
+                <div class="budget__tips-list">
+                  <div class="budget__tip">
+                    <h4>50/30/20 Rule</h4>
+                    <p>Allocate 50% to needs, 30% to wants, and 20% to savings and debt repayment.</p>
+                  </div>
+                  <div class="budget__tip">
+                    <h4>Emergency Fund</h4>
+                    <p>Aim to save 3-6 months of expenses for unexpected emergencies.</p>
+                  </div>
+                  <div class="budget__tip">
+                    <h4>Track Everything</h4>
+                    <p>Monitor all your spending to identify areas where you can cut back.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page__outro outro outro_budget">
+        <div class="outro__container">
+          <h2 class="outro__title title">Need Help with Your Budget?</h2>
+          <div class="outro__text">
+            Our financial experts can help you create a personalized budget plan and provide strategies 
+            to improve your financial health and achieve your goals.
+          </div>
+          <a href="contact.html" class="outro__button button">Schedule Financial Consultation</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <a href="#" class="footer__policy">Privacy Policy – Terms & Conditions</a>
+        <a href="index.html" class="footer__logo logo">
+          <img src="img/logo.png" alt="Wolf Finances LLC" class="logo__image">
+        </a>
+        <div class="footer__copyright">Copyright © 2025 Wolf Finances – All Rights Reserved</div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="js/budget.js"></script>
+</body>
+
+</html> 

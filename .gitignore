@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if any)
+node_modules/
+
+# Deployment files
+deploy.sh
+DEPLOYMENT_GUIDE.md
+UPLOAD_CHECKLIST.txt
+SSL_SETUP_GUIDE.md
+DEPLOYMENT_AUTOMATION.md
+wolf-finances-website.zip 
